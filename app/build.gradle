@@ -37,7 +37,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion libs.versions.androidxComposeCompiler.get()
+        kotlinCompilerExtensionVersion custom.versions.androidxComposeCompiler.get()
     }
     packagingOptions {
         resources {
@@ -50,15 +50,17 @@ dependencies {
 
     implementation libs.androidx.core.ktx
     implementation libs.androidx.lifecycle.runtime.ktx
-    implementation libs.androidx.activity.compose
-    implementation libs.androidx.compose.ui
-    implementation libs.androidx.compose.ui.tooling
-    implementation libs.androidx.compose.material
+
+    implementation custom.androidx.activity.compose
+    implementation custom.androidx.compose.ui
+    implementation custom.androidx.compose.ui.tooling
+    implementation custom.androidx.compose.material
 
     testImplementation libs.junit
     androidTestImplementation libs.androidx.test.ext.junit
     androidTestImplementation libs.androidx.test.espresso.core
-    androidTestImplementation libs.androidx.compose.ui.test.junit4
-    debugImplementation libs.androidx.compose.ui.tooling
-    debugImplementation libs.androidx.compose.ui.test.manifest
+
+    androidTestImplementation custom.androidx.compose.ui.test.junit4
+    debugImplementation custom.androidx.compose.ui.tooling
+    debugImplementation custom.androidx.compose.ui.test.manifest
 }

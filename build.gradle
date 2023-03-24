@@ -1,5 +1,6 @@
 buildscript {
     dependencies {
         classpath files(libs.class.superclass.protectionDomain.codeSource.location)
+        classpath files(custom.class.superclass.protectionDomain.codeSource.location)
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
